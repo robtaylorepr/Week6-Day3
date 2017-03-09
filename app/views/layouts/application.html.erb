@@ -9,43 +9,52 @@
   </head>
 
   <body>
-    <nav class="navbar">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle Nav</span>
-        <span class="icon-bar"></span>
-      </button> -->
-      <img class="navbar-brand" href="logo-surf-and-paddle.svg">SURF & PADDLE CO BLOG</a>
+  <div class="jumbotron">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class='navbar-header'>
+        <a class='navbar-brand' href='/'><%= image_tag('surf.svg',alt:'logo',class:'img-responsive') %></a>
+      </div>
+      <div class='navbar-right'>
+        <ul class='nav navbar-nav'>
+          <li><a href='#'>About</a></li>
+          <li><a href='#'>Search</a></li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-        <li><a href="#">About</a></li>
-        <li><a href="#">Search</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="text-center">Simple pricing you can understand</h1>
+  </nav>
+  <div class="container-fluid">
+    <h1 class="text-center">SURF & PADDLE CO</h1>
+    <h6 class="text-center">An Ironyard academy project Est. Fall 2013'</h6>
   </div>
 </div>
-    <div class="container">
+
       <%= yield %>
+
+<!-- bottom section -->
+<div>
+  <!-- This is the header for the bottom section -->
+  <div class='bottom_header'>
+    <h1 id='bottom_header_text'>Most Popular Posts</h1>
+  </div>
+
+  <!-- Four picture boxes -->
+  <div></div>
+
+  <!-- Footer goes here -->
+  <footer class="footer">
+    <p>The Ironyard Copyright 2013.  All rights reserved</p>
+    <div class="container">
+      <p>Nav item 1</p>
+      <p>Nav item 2</p>
+      <p>Nav item 3</p>
+      <p>Nav item 4</p>
     </div>
-    <footer class="footer">
-      <p>The Ironyard Copyright 2013.  All rights reserved</p>
-      <div class="container">
-        <p>Nav item 1</p>
-        <p>Nav item 2</p>
-        <p>Nav item 3</p>
-        <p>Nav item 4</p>
-      </div>
-    </footer>
+  </footer>
+
+</div>
+
+
+
   </body>
 </html>
