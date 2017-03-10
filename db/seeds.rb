@@ -11,9 +11,10 @@
   )
   15.times do
   Post.create!(
-    body: Faker::Hipster.paragraphs(2),
+    body: Faker::Hipster.paragraphs(2).join("\n\n"),
+    title: Faker::TwinPeaks.quote,
     user_id: @user.id,
-    created_at: rand(1..700).days_ago
+    created_at: rand(1..700).days.ago
   )
   end
 end

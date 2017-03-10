@@ -8,17 +8,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class='bdy'>
   <div class="jumbotron">
   <nav class="navbar">
     <div class="container-fluid">
       <div class='navbar-header'>
-        <a class='navbar-brand' href='/'><%= image_tag('surf.svg',alt:'logo',class:'img-responsive') %></a>
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag('surf.svg',alt:'logo',class:'img-responsive media-object logo') %>
+        <% end %>
+        <a class='navbar-brand' href='/'>SURF &amp; CO BLOG</a>
       </div>
       <div class='navbar-right'>
         <ul class='nav navbar-nav'>
-          <li><a href='#'>About</a></li>
-          <li><a href='#'>Search</a></li>
+          <li class='navbar-text'><a href='#'>About</a></li>
+          <li class='navbar-text'><a href='#'>Search</a></li>
         </ul>
       </div>
     </div>
@@ -39,16 +42,37 @@
   </div>
 
   <!-- Four picture boxes -->
-  <div></div>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-3'>
+        <%= image_tag('boat.jpeg') %>
+      </div>
+      <div class='col-xs-3'>
+        <%= image_tag('kayak.jpeg') %>
+      </div>
+      <div class='col-xs-3'>
+        <%= image_tag('life.jpeg') %>
+      </div>
+      <div class='col-xs-3'>
+        <%= image_tag('buoy.png') %>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer goes here -->
   <footer class="footer">
-    <p>The Ironyard Copyright 2013.  All rights reserved</p>
-    <div class="container">
-      <p>Nav item 1</p>
-      <p>Nav item 2</p>
-      <p>Nav item 3</p>
-      <p>Nav item 4</p>
+    <div class="container bottomnav">
+      <div class='row'>
+        <div class='col-xs-6'>
+          <p>The Ironyard Copyright 2013.  All rights reserved</p>
+        </div>
+        <div class='col-xs-6 fnr'>
+          <p>Nav item 1 |</p>
+          <p>Nav item 2 |</p>
+          <p>Nav item 3 |</p>
+          <p>Nav item 4</p>
+        </div>
+      </div>
     </div>
   </footer>
 
