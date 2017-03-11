@@ -26,7 +26,12 @@
          <!-- user image goes here -->
          <div id='squeeze'><%= image_tag('user.jpeg', class: "img-circle") %></div>
          <%= @post.user.name %>
-         <h5>Twitter Facebook Instagram</h5>
+         <!-- <h5>Twitter Facebook Instagram</h5> -->
+         <div class=row>
+           <button type='button' class='col-xs-4 clr'>Twitter</button>
+           <button type='button' class='col-xs-4 clr'>Facebook</button>
+           <button type='button' class='col-xs-4 clr'>Instagram</button>
+         </div>
          <!-- Ad image -->
          <%= image_tag('ad.jpeg') %>
          <a id=rightalign href='#'>About this ad</a>
