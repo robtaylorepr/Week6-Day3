@@ -5,7 +5,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.all.order(created_at: 'desc').first
+    @id = params[:id]
+    if @id
+      @post = Post.find(@id)   #show the post specified
+    else
+      @post = Post.all.order(created_at: 'desc').first  # show the first post
+    end
   end
 
 

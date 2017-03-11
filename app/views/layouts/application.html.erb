@@ -44,17 +44,17 @@
   <!-- Four picture boxes -->
   <div class='container'>
     <div class='row'>
-      <div class='col-xs-3'>
-        <%= image_tag('boat.jpeg') %>
+      <div class='col-xs-3 hoveropacity'>
+        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'2') %>
       </div>
-      <div class='col-xs-3'>
-        <%= image_tag('kayak.jpeg') %>
+      <div class='col-xs-3 hoveropacity'>
+        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'3') %>
       </div>
-      <div class='col-xs-3'>
-        <%= image_tag('life.jpeg') %>
+      <div class='col-xs-3 hoveropacity'>
+        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'4') %>
       </div>
-      <div class='col-xs-3'>
-        <%= image_tag('buoy.png') %>
+      <div class='col-xs-3 hoveropacity'>
+        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'5') %>
       </div>
     </div>
   </div>
