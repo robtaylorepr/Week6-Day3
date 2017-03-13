@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     else
       @post = Post.all.order(created_at: 'desc').first  # show the first post
     end
+    @posts = Post.all.order(created_at: 'desc').where("id != #{@post.id}").limit(4)
   end
 
 

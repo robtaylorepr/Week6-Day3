@@ -42,27 +42,7 @@
     <h1 id='bottom_header_text'>Most Popular Posts</h1>
   </div>
 
-  <!-- Four picture boxes -->
-  <div class='container'>
-    <div class='row'>
-      <div class='col-xs-3 hoveropacity'>
-        <%=link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id: Post.all.order(created_at: 'desc').second.id) %>
-        <h6 class='position_title'><%= Post.all.order(created_at: 'desc').second.title %></h6>
-      </div>
-      <div class='col-xs-3 hoveropacity'>
-        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:Post.all.order(created_at: 'desc').third.id) %>
-        <h6 class='position_title'><%= Post.all.order(created_at: 'desc').third.title %></h6>
-      </div>
-      <div class='col-xs-3 hoveropacity'>
-        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:Post.all.order(created_at: 'desc').fourth.id) %>
-        <h6 class='position_title'><%= Post.all.order(created_at: 'desc').fourth.title %></h6>
-      </div>
-      <div class='col-xs-3 hoveropacity'>
-        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:Post.all.order(created_at: 'desc').fifth.id) %>
-        <h6 class='position_title'><%= Post.all.order(created_at: 'desc').fifth.title %></h6>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Footer goes here -->
   <footer class="footer">

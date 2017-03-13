@@ -43,3 +43,15 @@
      </div>
    </div>
 </section>
+
+<!-- Four picture boxes -->
+<div class='container'>
+  <div class='row'>
+    <% @posts.each do |post|%>
+      <div class='col-xs-3 hoveropacity'>
+        <%=link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id: post.id) %>
+        <h6 class='position_title'><%= post.title %></h6>
+      </div>
+    <% end %>
+  </div>
+</div>
