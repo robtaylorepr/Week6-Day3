@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 5.times do
   @user = User.create!(
-    name: Faker::Name.first_name
+    name: Faker::Name.first_name,
+    bio: Faker::TwinPeaks.quote,
+    avatar: Faker::Avatar.image
   )
   15.times do
   Post.create!(

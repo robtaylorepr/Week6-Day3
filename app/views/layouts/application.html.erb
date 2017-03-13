@@ -21,6 +21,7 @@
       <div class='navbar-right'>
         <ul class='nav navbar-nav'>
           <li class='navbar-text'><a href='#'>About</a></li>
+          <li class='navbar-text'><a href='<%= new_post_path %>'>NewPost</a>
           <li class='navbar-text'><a href='#'>Search</a></li>
         </ul>
       </div>
@@ -45,19 +46,19 @@
   <div class='container'>
     <div class='row'>
       <div class='col-xs-3 hoveropacity'>
-        <%=link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'2') %>
+        <%=link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id: Post.all.order(created_at: 'desc').second.id) %>
         <h6 class='position_title'><%= Post.all.order(created_at: 'desc').second.title %></h6>
       </div>
       <div class='col-xs-3 hoveropacity'>
-        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'3') %>
+        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:Post.all.order(created_at: 'desc').third.id) %>
         <h6 class='position_title'><%= Post.all.order(created_at: 'desc').third.title %></h6>
       </div>
       <div class='col-xs-3 hoveropacity'>
-        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'4') %>
+        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:Post.all.order(created_at: 'desc').fourth.id) %>
         <h6 class='position_title'><%= Post.all.order(created_at: 'desc').fourth.title %></h6>
       </div>
       <div class='col-xs-3 hoveropacity'>
-        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:'5') %>
+        <%= link_to(image_tag('boat.jpeg'), controller:'posts', action:'show', id:Post.all.order(created_at: 'desc').fifth.id) %>
         <h6 class='position_title'><%= Post.all.order(created_at: 'desc').fifth.title %></h6>
       </div>
     </div>

@@ -1,0 +1,16 @@
+<div class="media">
+  <div class="media-left">
+    <%= link_to post.user do %>
+      <%= image_tag post.user.avatar, class: "media-object img-circle" %>
+    <% end %>
+  </div>
+  <div class="media-body">
+    <%= simple_format post.body %>
+    <!-- <small>Chirped by <%= chirp.user.username %> <%= link_to "#{time_ago_in_words(chirp.created_at)} ago", controller: "chirps", action: "show", id: chirp.id %></small> -->
+    <!-- <small>Chirped by <%= chirp.user.username %> <%= link_to "#{time_ago_in_words(chirp.created_at)} ago", "/chirps/#{chirp.id}" %></small> -->
+    <!-- <small>Chirped by <%= chirp.user.username %> <%= link_to "#{time_ago_in_words(chirp.created_at)} ago", chirp_path(id: chirp.id) %></small> -->
+    <!-- <small>Chirped by <%= chirp.user.username %> <%= link_to "#{time_ago_in_words(chirp.created_at)} ago", chirp_path(chirp.id) %></small> -->
+    <!-- <small>Chirped by <%= chirp.user.username %> <%= link_to "#{time_ago_in_words(chirp.created_at)} ago", chirp_path(chirp) %></small> -->
+    <strong>Posted by <%= link_to post.user.username, post.user, class: "btn btn-default" %> <%= link_to "#{time_ago_in_words(chirp.created_at)} ago", chirp %> :: <%= button_to "EXTERMINATE!!", chirp, method: :delete, class: "btn btn-danger" %></strong>
+  </div>
+</div>
