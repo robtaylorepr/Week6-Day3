@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates   :name, presence:   true,
                      uniqueness: true
   validates   :avatar, presence: true
+  validates   :email, presence:  true
   has_secure_password
   acts_as_follower
   acts_as_followable
@@ -20,5 +21,5 @@ class User < ApplicationRecord
   def to_s
     username
   end
-  
+
 end
