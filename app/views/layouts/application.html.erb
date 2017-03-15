@@ -21,7 +21,14 @@
       <div class='navbar-right'>
         <ul class='nav navbar-nav'>
           <li class='navbar-text'><a href='#'>About</a></li>
-          <li class='navbar-text'><a href='<%= new_post_path %>'>NewPost</a>
+          <% if current_user %>
+            <%= link_to "Post!", new_post_path, class: "btn btn-success" %>
+            <%= link_to "Logout!", logout_path, method: :delete, class: "btn btn-danger" %>
+          <% else %>
+            <%= link_to "Login!", login_path, class: "btn btn-primary" %>
+            <%= link_to "Signup!", new_user_path, class: "btn btn-primary" %>
+          <% end %>
+          <!-- <li class='navbar-text'><a href='<%= new_post_path %>'>NewPost</a> -->
           <li class='navbar-text'><a href='#'>Search</a></li>
         </ul>
       </div>
