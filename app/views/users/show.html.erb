@@ -9,10 +9,10 @@
         <% end %>
       </div>
       <div class="col-md-9">
-        <h2><%= @user.username %></h2>
+        <h2><%= @user.name %></h2>
         <%= simple_format @user.bio %>
-        <h3>Chirps</h3>
-        <%= render @user.chirps %>
+        <h3>Posts</h3>
+        <%= render @user.posts %>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
     <ul class="list-unstyled">
       <% if @user.followees(User).count > 0 %>
         <% @user.followees(User).each do |user| %>
-          <li><%= link_to user.username, user %></li>
+          <li><%= link_to user.name, user %></li>
         <% end %>
       <% else %>
         <p>
@@ -33,7 +33,7 @@
     <h4>Followers</h4>
     <ul class="list-unstyled">
       <% @user.followers(User).each do |user| %>
-        <li><%= link_to user.username, user %></li>
+        <li><%= link_to user.name, user %></li>
       <% end %>
     </ul>
   </div>
