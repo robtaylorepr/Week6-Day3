@@ -18,7 +18,7 @@
          <a href='#'><button type='button'>Read Comments</button></a>
          <a href='#'><button type='button'>Read Later</button></a>
          <a href='#'><button type='button'>Share This Post</button></a>
-         <% if is_owner %>
+         <% if is_owner?(current_user) %>
            <a href="<%= edit_post_path @post %>"><button type='button'>Edit This Post</button></a>
          <% end %>
        </div>
