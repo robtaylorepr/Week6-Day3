@@ -39,6 +39,15 @@
     <h6 class="text-center">An Ironyard academy project Est. Fall 2013'</h6>
   </div>
 </div>
+<div>
+  <% if flash.any? %>
+    <% flash.each do |klass, message| %>
+      <div class='alert alert-<%=klass%>' role='alert'>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+</div>
+
 
       <%= yield %>
 
