@@ -25,6 +25,9 @@ gem 'faker'
 gem 'socialization'
 gem 'rails_12factor', group: :production
 gem 'simple_form'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'figaro'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
