@@ -18,7 +18,9 @@
          <a href='#'><button type='button'>Read Comments</button></a>
          <a href='#'><button type='button'>Read Later</button></a>
          <a href='#'><button type='button'>Share This Post</button></a>
-         <a href="<%= edit_post_path @post %>"><button type='button'>Edit This Post</button></a>
+         <% if @post.is_owner?(current_user) %>
+           <a href="<%= edit_post_path @post %>"><button type='button'>Edit This Post</button></a>
+         <% end %>
        </div>
      </div>
      <!-- right half -->
@@ -49,7 +51,7 @@
   <div class='row'>
     <% @posts.each do |post|%>
       <div class='col-xs-3 hoveropacity'>
-        <%=link_to(image_tag('boat.jpg'), controller:'posts', action:'show', id: post.id) %>
+        <%=link_to(image_tag('@post.photo.thumb.url'), controller:'posts', action:'show', id: post.id) %>
         <h6 class='position_title'><%= post.title %></h6>
       </div>
     <% end %>

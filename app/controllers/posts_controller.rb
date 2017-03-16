@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :require_user, only: [:new, :create, :destroy]
+  before_action :is_owner, only: [:destroy]
 
   def index
     @post = Post.all
@@ -20,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to :root
     else
@@ -42,7 +44,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     redirect_to :root
   end
@@ -50,8 +51,16 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    # {post: {user_id: , body:}}
-    params.require(:post).permit(:user_id, :body, :title)
+    # {chirp: {user_id: , body:}}
+    params.require(:post).permit(:body, :title, :photo)
+  end
+
+  def is_owner
+    @post = current_user.posts.find_by(id: params[:id])
+    unless @post && @post.user == current_user
+      flash[:danger] = "That's not your post, bucky"
+      redirect_to :root
+    end
   end
 
 end

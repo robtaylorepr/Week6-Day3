@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: drjcc8vr0
+  api_key: '739483452965475'
+  api_secret: q0btj4JYr4lS5EBKTve8LCdV0Ns
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: drjcc8vr0
+  api_key: '739483452965475'
+  api_secret: q0btj4JYr4lS5EBKTve8LCdV0Ns
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: drjcc8vr0
+  api_key: '739483452965475'
+  api_secret: q0btj4JYr4lS5EBKTve8LCdV0Ns
+  enhance_image_tag: true
+  static_image_support: false
