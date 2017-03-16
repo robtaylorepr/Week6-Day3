@@ -28,6 +28,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'figaro'
+gem 'attachinary'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

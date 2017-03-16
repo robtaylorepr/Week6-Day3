@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :require_user, only: [:new, :create, :destroy]
   before_action :is_owner, only: [:destroy]
-  
+
   def index
     @post = Post.all
   end
@@ -52,7 +52,7 @@ class PostsController < ApplicationController
 
   def post_params
     # {chirp: {user_id: , body:}}
-    params.require(:post).permit(:body, :title)
+    params.require(:post).permit(:body, :title, :photo)
   end
 
   def is_owner

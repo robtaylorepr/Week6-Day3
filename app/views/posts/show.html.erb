@@ -51,7 +51,7 @@
   <div class='row'>
     <% @posts.each do |post|%>
       <div class='col-xs-3 hoveropacity'>
-        <%=link_to(image_tag('boat.jpg'), controller:'posts', action:'show', id: post.id) %>
+        <%=link_to(image_tag('@post.photo.thumb.url'), controller:'posts', action:'show', id: post.id) %>
         <h6 class='position_title'><%= post.title %></h6>
       </div>
     <% end %>

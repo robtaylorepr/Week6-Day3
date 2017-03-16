@@ -6,6 +6,8 @@ class Post < ApplicationRecord
   delegate :avatar, to: :user
   default_scope { order(created_at: :desc) }
 
+  mount_uploader :photo, CarrierwaveUploader
+  
   # def avatar
   #   user.avatar
   # end
